@@ -1,6 +1,6 @@
 # 🌟 Portfolio – Shravan Vinay Hegde 
 
-Website is live at [shravanvinayhegde.github.io/portfolio/](https://shravanvinayhegde.github.io/portfolio/)
+Website is live at [shravanvinayhegde.github.io/Portfolio/](https://shravanvinayhegde.github.io/Portfolio/)
 
 Welcome to my portfolio! This repository showcases my journey as a Computer Science & Engineering student specializing in **Artificial Intelligence** at **CMR University, Bangalore**, highlighting projects, skills, and experiments in software development and system design.  
 
