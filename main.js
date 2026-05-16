@@ -49,23 +49,143 @@
     initTheme();
 
     var nav = document.getElementById("navbar");
-    var hero = document.getElementById("home");
-    var heroBg = document.getElementById("heroBg");
+    var typingEl = document.getElementById("typingText");
+    var TYPING_TEXT = "Backend & AI automation engineer|";
 
-    if (hero && heroBg && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        hero.addEventListener(
-            "mousemove",
-            function (e) {
-                var r = hero.getBoundingClientRect();
-                var x = (e.clientX - r.left) / r.width - 0.5;
-                var y = (e.clientY - r.top) / r.height - 0.5;
-                heroBg.style.transform =
-                    "scale(1.12) translate(" + x * 28 + "px, " + y * 22 + "px)";
-            },
-            { passive: true }
-        );
-        hero.addEventListener("mouseleave", function () {
-            heroBg.style.transform = "scale(1.1)";
+    function initTyping() {
+        if (!typingEl) {
+            return;
+        }
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            typingEl.textContent = TYPING_TEXT.replace("|", "");
+            return;
+        }
+        var index = 0;
+        var forward = true;
+        var pause = false;
+
+        function tick() {
+            if (pause) {
+                setTimeout(function () {
+                    pause = false;
+                    forward = false;
+                    tick();
+                }, 900);
+                return;
+            }
+
+            var display = TYPING_TEXT.slice(0, index);
+            typingEl.textContent = display;
+
+            if (forward) {
+                if (index < TYPING_TEXT.length) {
+                    index += 1;
+                    setTimeout(tick, 55);
+                } else {
+                    pause = true;
+                    setTimeout(tick, 400);
+                }
+            } else {
+                if (index > 0) {
+                    index -= 1;
+                    setTimeout(tick, 28);
+                } else {
+                    forward = true;
+                    setTimeout(tick, 200);
+                }
+            }
+        }
+
+        tick();
+    }
+
+    initTyping();
+    initPrism();
+    initCertMarquee();
+    initSkillTilt();
+
+    function initPrism() {
+        var scene = document.getElementById("prismScene");
+        var prism = document.getElementById("interactivePrism");
+        if (!scene || !prism) {
+            return;
+        }
+
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var tiltX = 18;
+        var tiltY = 0;
+        var targetX = 18;
+        var targetY = 0;
+
+        if (!reduceMotion) {
+            document.addEventListener(
+                "mousemove",
+                function (e) {
+                    var nx = e.clientX / window.innerWidth - 0.5;
+                    var ny = e.clientY / window.innerHeight - 0.5;
+                    targetX = 18 - ny * 22;
+                    targetY = nx * 32;
+                    scene.style.transform =
+                        "translate(" + nx * 18 + "px, " + ny * 14 + "px)";
+                },
+                { passive: true }
+            );
+
+            (function tick() {
+                tiltX += (targetX - tiltX) * 0.07;
+                tiltY += (targetY - tiltY) * 0.07;
+                prism.style.transform =
+                    "rotateX(" + tiltX + "deg) rotateY(" + tiltY + "deg)";
+                requestAnimationFrame(tick);
+            })();
+        }
+
+        prism.addEventListener("click", function () {
+            prism.classList.add("prism-pulse");
+            window.setTimeout(function () {
+                prism.classList.remove("prism-pulse");
+            }, 550);
+        });
+    }
+
+    function initCertMarquee() {
+        var track = document.getElementById("certMarqueeTrack");
+        if (!track || track.dataset.marqueeReady === "true") {
+            return;
+        }
+        var cards = Array.prototype.slice.call(track.children);
+        cards.forEach(function (card) {
+            var clone = card.cloneNode(true);
+            clone.setAttribute("aria-hidden", "true");
+            var link = clone.querySelector(".cert-link");
+            if (link) {
+                link.setAttribute("tabindex", "-1");
+            }
+            track.appendChild(clone);
+        });
+        track.dataset.marqueeReady = "true";
+    }
+
+    function initSkillTilt() {
+        var tiles = document.querySelectorAll(".skill-tile[data-tilt]");
+        if (!tiles.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            return;
+        }
+        tiles.forEach(function (tile) {
+            tile.addEventListener("mousemove", function (e) {
+                var rect = tile.getBoundingClientRect();
+                var x = (e.clientX - rect.left) / rect.width - 0.5;
+                var y = (e.clientY - rect.top) / rect.height - 0.5;
+                tile.style.transform =
+                    "translateY(-8px) scale(1.03) rotateX(" +
+                    -y * 8 +
+                    "deg) rotateY(" +
+                    x * 8 +
+                    "deg)";
+            });
+            tile.addEventListener("mouseleave", function () {
+                tile.style.transform = "";
+            });
         });
     }
 
