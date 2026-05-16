@@ -1,31 +1,33 @@
-# 🌟 Portfolio – Shravan Vinay Hegde  
+# 🌟 Portfolio – Shravan Vinay Hegde 
 
-Welcome to my portfolio! This repository showcases my journey as a Computer Engineering student at **CMR University, Bangalore**, highlighting projects, skills, and experiments in software development and design.  
+Website is live at [shravanvinayhegde.github.io/portfolio/](https://shravanvinayhegde.github.io/portfolio/)
+
+Welcome to my portfolio! This repository showcases my journey as a Computer Science & Engineering student specializing in **Artificial Intelligence** at **CMR University, Bangalore**, highlighting projects, skills, and experiments in software development and system design.  
 
 ## 🚀 About Me  
-- First-year Computer Engineering student (Graduation: 2029)  
-- Passionate about **backend development, AI/ML integration, and modern UI/UX design**  
-- Skilled in **Python, C, Java, SQL, FastAPI, Docker, PostgreSQL, HTML/CSS**  
-- Strong focus on **debugging, documentation, and professional presentation**  
+- Computer Science Engineering (AI) student (Graduation: 2029)  
+- Passionate about **backend development, DevOps, AI/ML integration, and modern UI/UX design**  
+- Skilled in building robust RESTful APIs, managing containerized workflows, and automation  
+- Strong focus on **clean architecture, comprehensive documentation, and professional presentation**  
 
 ## 📂 Featured Projects  
-- **Python GUI Sales Management App** – SQLite backend, polished UI, professional documentation  
-- **FastAPI Analyzer** – RESTful API design with Dockerized deployment and troubleshooting notes  
-- **Interactive Web Pages** – Accessible, modern HTML/CSS designs with attention to detail  
+- **Python GUI Sales Management App** – Built with a SQLite backend and Tkinter, featuring a polished UI and professional financial reporting documentation.  
+- **FastAPI Analyzer** – A RESTful API design featuring production-ready Dockerized deployment, SQLAlchemy integration, and structured troubleshooting schema notes.  
+- **Interactive Web Pages** – Modern, responsive, and accessible HTML/CSS interfaces developed with a keen eye for visual hierarchy and user experience.  
 
 ## 🛠️ Skills  
-- Backend: FastAPI, REST APIs, PostgreSQL, Docker  
-- Frontend: HTML, CSS, UI/UX principles  
-- Programming: Python,c 
-- Databases: SQL, schema design, query optimization  
-- Documentation: README drafting, troubleshooting notes, professional communication
-- Tools: CodeScence,configcat,cursor ai,github actions  
+- **Backend & DevOps:** FastAPI, REST APIs, Docker, GitHub Actions, ConfigCat (Feature Flags)
+- **Programming:** Python, C, SQL  
+- **Databases:** PostgreSQL, SQLite, SQLAlchemy (ORM), schema design, and query optimization  
+- **Frontend & UI/UX:** HTML5, CSS3, modern UI design principles  
+- **Analysis & Tools:** CodeScene (Code Quality), Cursor AI, Git version control  
+- **Documentation:** Markdown drafting, API troubleshooting notes, and professional technical communication  
 
 ## 🎯 Goals  
-- Build impactful projects with clear documentation  
-- Refine resume and portfolio for internships and collaborations  
-- Explore AI/ML applications in real-world scenarios  
+- Build highly scalable backend projects with production-grade documentation  
+- Secure high-impact internships and collaborative opportunities in software engineering  
+- Deepen vertical integration of AI/ML models into real-world business applications  
 
 ## 📬 Contact  
-- **LinkedIn:** [www.linkedin.com/in/shravan-vinay-hegde-a27ba5384]  
-- **Email:** [shravan.vinay.h@gmail.com]  
+- **LinkedIn:** [linkedin.com/in/shravan-vinay-hegde-a27ba5384](https://www.linkedin.com/in/shravan-vinay-hegde-a27ba5384)  
+- **Email:** [shravan.vinay.h@gmail.com](mailto:shravan.vinay.h@gmail.com)
